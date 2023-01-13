@@ -1,0 +1,23 @@
+@import './../../../assets/styles/variables.scss';
+
+#notification-component {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  min-width: 40vw;
+  background-color: $color-gray;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+
+  box-shadow: 5px 5px $color-light-gray h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+
+
+
+}

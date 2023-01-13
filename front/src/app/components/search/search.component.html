@@ -1,0 +1,27 @@
+<div id="search-component">
+  <div class="search-component__input-container">
+    <label>Search movies</label>
+    <input #searchInput (input)="searchMovies(searchInput.value)" value="{{searchQuery}}" placeholder="Search movies" />
+  </div>
+
+  <ul *ngIf="movies$ | async as movies" class="search-component__result-container">
+    <li class="search-component__result-container__column-names">
+      <button (click)="searchMovies(searchInput.value, sortableFields.Title)"
+        [class.active]="sortBy === sortableFields.Title" type="button">Title</button>
+      <button (click)="searchMovies(searchInput.value, sortableFields.IMDBRating)"
+        [class.active]="sortBy === sortableFields.IMDBRating" type="button">IMDB Rating</button>
+      <button (click)="searchMovies(searchInput.value, sortableFields.IMDBVotes)"
+        [class.active]="sortBy === sortableFields.IMDBVotes" type="button">IMDB Votes</button>
+      <button (click)="searchMovies(searchInput.value, sortableFields.RottenTomatoesRating)"
+        [class.active]="sortBy === sortableFields.RottenTomatoesRating" type="button">Rotten
+        Tomatoes
+        Rating</button>
+    </li>
+    <li *ngFor="let movie of movies" class="search-component__result-container__rows">
+      <span><a routerLink="/movie-details/{{movie.id}}">{{movie['Title']}}</a></span>
+      <span>{{movie['IMDB Rating']}}</span>
+      <span>{{movie['IMDB Votes']}}</span>
+      <span>{{movie['Rotten Tomatoes Rating']}}%</span>
+    </li>
+  </ul>
+</div>

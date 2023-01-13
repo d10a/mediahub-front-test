@@ -1,0 +1,7 @@
+<div id="auth-component">
+  <label for="auth-login">Login</label>
+  <input id="auth-login" [(ngModel)]="credentials.username" placeholder="login" />
+  <label for="auth-password">Password</label>
+  <input id="auth-password" type="password" [(ngModel)]="credentials.password" placeholder="password" />
+  <button type="button" (click)="authenticateUser()">Connexion</button>
+</div>

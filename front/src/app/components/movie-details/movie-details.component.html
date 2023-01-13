@@ -1,0 +1,84 @@
+<div *ngIf="movie" id="movie-details">
+
+  <header class="movie-details__header">
+    <button type="button" (click)="goToPreviousPage()">Retour</button>
+    <h2>{{movie['Title']}}</h2>
+  </header>
+
+
+  <div class="movie-details__infos">
+    <ul class="movie-details__rating">
+      <li>
+        <span>Rotten Tomatoes Rating</span>
+        <span>{{movie['Rotten Tomatoes Rating']}}</span>
+      </li>
+      <li>
+        <span>IMDB Rating</span>
+        <span>{{movie['IMDB Rating']}}</span>
+      </li>
+      <li>
+        <span>IMDB Votes</span>
+        <span>{{movie['IMDB Votes']}}</span>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <span>#</span>
+        <span>{{movie['id']}}</span>
+      </li>
+      <li>
+        <span>US Gross</span>
+        <span>{{movie['US Gross']}}</span>
+      </li>
+      <li>
+        <span>Worldwide Gross</span>
+        <span>{{movie['Worldwide Gross']}}</span>
+      </li>
+      <li>
+        <span>US DVD Sales</span>
+        <span>{{movie['US DVD Sales']}}</span>
+      </li>
+      <li>
+        <span>Production Budget</span>
+        <span>{{movie['Production Budget']}}</span>
+      </li>
+      <li>
+        <span>Release Date</span>
+        <span>{{movie['Release Date'] | date: 'longDate'}}</span>
+      </li>
+      <li>
+        <span>MPAA Rating</span>
+        <span>{{movie['MPAA Rating']}}</span>
+      </li>
+      <li>
+        <span>Running Time min</span>
+        <span>{{movie['Running Time min']}}</span>
+      </li>
+      <li>
+        <span>Distributor</span>
+        <span>{{movie['Distributor']}}</span>
+      </li>
+      <li>
+        <span>Source</span>
+        <span>{{movie['Source']}}</span>
+      </li>
+      <li>
+        <span>Major Genre</span>
+        <span>{{movie['Major Genre']}}</span>
+      </li>
+      <li>
+        <span>US Gross</span>
+        <span>{{movie['US Gross']}}</span>
+      </li>
+      <li>
+        <span>Creative Type</span>
+        <span>{{movie['Creative Type']}}</span>
+      </li>
+      <li>
+        <span>Director</span>
+        <span>{{movie['Director']}}</span>
+      </li>
+
+    </ul>
+  </div>
+</div>

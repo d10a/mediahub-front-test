@@ -1,0 +1,29 @@
+@import './../../../assets/styles/variables.scss';
+
+#auth-component {
+  min-width: 200px;
+  width: calc(30vw - 4rem);
+  padding: 2rem;
+  margin-left: 50%;
+  margin-top: 5rem;
+
+  transform: translateX(-50%);
+  background-color: $color-white;
+
+  label {
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  input {
+    font-size: 1.2rem;
+    margin: 1rem 0 3rem 0;
+    padding: 0.5rem;
+    width: 100%;
+    border: none;
+    background-color: $color-light-gray;
+    border-radius: 0.3rem;
+    display: block;
+  }
+}
