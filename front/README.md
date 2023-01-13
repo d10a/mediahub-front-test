@@ -12,6 +12,8 @@
 
 5. la UI est assé basique, encore une fois par manque de temps/dispo
 
+6. Le json issue de l'API aurait besoin de passer par un viewModel pour normaliser les nom de champs
+
 Bonne lecture de code et merci!
 
 
