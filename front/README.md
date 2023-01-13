@@ -1,27 +1,51 @@
-# Front
+# Mediahub test 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.
+> Quelques remarques concernant mes choix et d'éventuelles axes d'amélioration si plus de temps/dispo
 
-## Development server
+1. j'ai priorisé la gestion d'un component stateful (search) en utilisant une RouteReuseStrategy pour garder le contexte du component de recherche en cas de clique sur retour depuis la page detail
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2. Je n'ai pas écrit de tests unitaires par manque de temps (priorité au fonctionnel), mais je pourrai partager un projet perso qui en contient si besoin
 
-## Code scaffolding
+3. les requêtes HTTP sont dans les services. Elles devraient être dans des repositories pour simplifier notemment l'écriture de tests unitaire via des mocks. Pas utile dans mon cas car pas de TU.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+4. Le bouton logout devrait être dans un component distinct, mais a ce stade du projet il n'est pas encore partagé
 
-## Build
+5. la UI est assé basique, encore une fois par manque de temps/dispo
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Bonne lecture de code et merci!
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Lancer l'API
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Vous aurez besoin de node.js sur votre poste, dans une version 14 ou supérieure.
 
-## Further help
+```shell
+# Ouvrir le répertoire
+cd api/
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Installer les dépendances
+yarn
+
+# Lancer le serveur
+yarn start
+```
+
+## Lancer l'application (Front)
+
+dans un autre terminal
+
+```shell
+# Ouvrir le répertoire
+cd front/
+
+# Installer les dépendances
+yarn
+
+# Lancer le serveur local
+ng serve
+```
+
+
+
+
